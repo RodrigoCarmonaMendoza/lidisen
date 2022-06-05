@@ -1,11 +1,11 @@
 """
-Last modification: 26/04/2022
-Created: 04/26/2022
+Last modification: 06/05/2022
+Created: 06/05/2022
 Author Rodrigo Carmona Mendoza
 Supported by lidisen.com
 """
 
-"""lidisen URL Configuration URLs module. """
+"""less2repair URL Configuration URLs module. """
 
 # Django
 from django.contrib import admin
