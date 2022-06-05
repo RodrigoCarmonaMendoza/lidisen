@@ -1,7 +1,7 @@
-<p align="center"> <img src="https://github.com/RodrigoCarmonaMendoza/less2repair/blob/main/static/img/og.png"> </p>
+<p align="center"> <img src="https://github.com/RodrigoCarmonaMendoza/lidisen/blob/main/static/img/og.png"> </p>
 
 
-# less2repair.com
+# lidisen.com
 
 
 Less to repair, fists Canadian project

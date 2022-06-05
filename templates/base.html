@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="lidisen">
+    <meta name="author" content="lidisen">
+    <meta name="generator" content="Rodrigo Carmona Mendoza">
+    {% load static %}
+    <!-- Social media meta tags -->
+    <meta property="og:title" content="lidisen" /> 
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="less to repair your home" />
+    <meta property="og:image" content="{% static 'img/og.png' %}" /> 
+    <meta property="og:url" content="lidisen.com" />
+    <meta property="og:site_name" content="less to repair" />    
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}"/>
+    <!-- Dinamic title -->
+    {% block head_content %}{% endblock %}
+
+    <!-- Bootstrap core CSS -->    
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <!-- Custom main templates CSS-->
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+  
+  </head>
+
+  <body>
+
+    <!-- Custom navigator bar -->
+    {% include "nav.html" %}
+    
+        <!-- Dinamic container -->
+        {% block container %}
+        {% endblock %}
+     
+    <!-- Custom footer -->
+    {% include "footer.html" %}
+          
+  </body>
+</html>

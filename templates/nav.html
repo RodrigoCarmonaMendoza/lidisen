@@ -1,0 +1,31 @@
+{% load static %}
+
+<header>
+{% if landing %}
+<nav class="navbar navbar-expand-md navbar-light fixed-top navbar-custom-malli">
+{% else %}
+<nav class="navbar navbar-expand-md navbar-light fixed-top navbar-orange-custom-malli">
+{% endif %}
+  
+  <img src="{% static 'img/lidisen.png' %}" width="30" height="50" alt="lidisen" loading="lazy">
+  <a class="navbar-brand" href="#"><span class="{% if landing %}title-name{% else %}title-name-white{% endif %}">Less</span> to repair</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse navbar-custom" id="navbar">
+  
+    <ul class="navbar-nav ml-auto">
+
+      <!-- Public access -->
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Link test</a>
+      </li>
+      
+    </ul>
+
+  </div>
+
+</nav>
+
+</header>
