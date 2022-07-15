@@ -5,7 +5,7 @@ Author Rodrigo Carmona Mendoza
 Supported by lidisen.com
 """
 
-"""less2repair URL Configuration URLs module. """
+"""lidisen URL Configuration URLs module. """
 
 # Django
 from django.contrib import admin
