@@ -1,8 +1,19 @@
 /*
 Last modification: 6/21/2022
-Created: 6/21/2022
+Created: 7/16/2022
 Author Rodrigo Carmona Mendoza
 Supported by lidisen
+*/
+
+/* 
+The color palette is made up of:
+primary colors:
+Polimetal gray: #51667b
+Porcia pink: #f63b94
+
+secondary colors:
+Light gray: #fdfcfc
+Simple white: #ffffff
 */
 
 .bd-placeholder-img {
@@ -67,11 +78,11 @@ Supported by lidisen
 
 /* custom local link */
 .link-custom {
-  color: #51667b;
+  color: #f63b94;
 }
 
 .link-custom:hover {
-  color: #b1b1b1;
+  color: #51667b;
 }
 
 
@@ -80,19 +91,19 @@ Supported by lidisen
 }
 
 .link-black-custom:hover {
-  color: #51667b;  
+  color: #f63b94;  
 }
 
 /* custom button */
 .btn-custom {
-  background-color: #51667b;
+  background-color: #f63b94;
   color: white;
   border-color: white;
 }
 
 .btn-custom:hover {
-  background-color: #ffffff;
-  color: #131f28;
+  background-color: #51667b;
+  color: white;
 }
 
 /* custom local footer */
