@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+
+{% block head_content %}
+    <title>lidisen - Tasker registration</title>
+{% endblock%}
+
+{% block container %}
+
+<div class="container">
+<br/><br/><br/>
+<h1 class="h4 mb-3 font-weight-normal">
+    Become a lidisen tasker
+</h1>
+<br/>
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+<form class="row g-3">
+    <div class="col-md-6">
+      <label for="inputEmail4" class="form-label">Email</label>
+      <input type="email" class="form-control" id="inputEmail4">
+    </div>
+    <div class="col-md-6">
+      <label for="inputPassword4" class="form-label">Password</label>
+      <input type="password" class="form-control" id="inputPassword4">
+    </div>
+    <div class="col-12">
+      <label for="inputAddress" class="form-label">Address</label>
+      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+    </div>
+    <div class="col-12">
+      <label for="inputAddress2" class="form-label">Address 2</label>
+      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+    </div>
+    <div class="col-md-6">
+      <label for="inputCity" class="form-label">City</label>
+      <input type="text" class="form-control" id="inputCity">
+    </div>
+    <div class="col-md-4">
+      <label for="inputState" class="form-label">State</label>
+      <select id="inputState" class="form-select">
+        <option selected>Choose...</option>
+        <option>...</option>
+      </select>
+    </div>
+    <div class="col-md-2">
+      <label for="inputZip" class="form-label">Zip</label>
+      <input type="text" class="form-control" id="inputZip">
+    </div>
+ 
+    <div class="form-group">
+        <div class="form-check">
+          <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
+          <label class="form-check-label" for="invalidCheck3">
+            Check me out:<br/>
+          </label>
+          <div class="invalid-feedback text-info">
+            Confirmo que los datos son correctos y tengo la documentaci&oacute;n necesaria para comprobarlos en cuanto se me requiera.
+            <br/>Ser contactado a trav&eacute;s del correo, tel&eacute;fono y domicilio proporcionado.
+          </div>
+          <div class="invalid-feedback">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#modalTermsConditions" class="text-info">
+            Estar de acuerdo con los términos y condiciones &raquo;
+            </a>
+          </div>
+          <div class="invalid-feedback">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#modalTaskerPrivacy" class="text-info">
+            Conocer el aviso de privacidad &raquo;
+            </a>
+          </div>
+        </div>
+      </div>
+    
+      <button type="submit" class="btn btn-primary">Sign in</button>
+
+  </form>
+
+</div>
+<br/>
+<!-- Modal tasker Notice of Privacy -->
+<div class="modal fade" id="modalTaskerPrivacy" tabindex="-1" aria-labelledby="modalTaskerPrivacy" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Notice of privacy</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            {% include "tasker/taskerNoticeofPrivacy.html" %}
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /Modal tasker Notice of Privacy -->
+
+
+<!-- Modal tasker terms and conditions -->
+<div class="modal fade" id="modalTermsConditions" tabindex="-1" aria-labelledby="modalTermsConditions" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Terms and conditions</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            {% include "tasker/taskerTermsandConditions.html" %}
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- /Modal tasker terms and conditions -->
+
+{% endblock %}

@@ -1,133 +1,88 @@
 /*
-Last modification: 11/1/2020
-Created: 11/4/2020
+Last modification: 6/21/2022
+Created: 7/16/2022
 Author Rodrigo Carmona Mendoza
-Supported by elysion.digital
+Supported by lidisen
 */
 
+/* 
+The color palette is made up of:
+primary colors:
+Polimetal gray: #51667b
+Porcia pink: #f63b94
 
-/* custom background nav color */
-.navbar-custom-malli { 
-  transition: 500ms ease;
-  background-color: rgba(255, 255, 255, 0.8);
+secondary colors:
+Light gray: #fdfcfc
+Simple white: #ffffff
+*/
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 
-.navbar-custom-malli.scrolled { 
-  background-color: rgba(255, 130, 0, 0.8) !important;
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
 }
 
-.navbar-orange-custom-malli {
-  background-color: rgba(255, 130, 0, 0.9) !important;
+.b-example-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
 }
 
-/* custom fix top container */
-.custom-top-fix {
-  padding-top: 6rem;
+.b-example-vr {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 100vh;
 }
 
-/* orange name colored */
-.title-name {
-  color: #ff8200;
-  font-size: xx-large;
+.bi {
+  vertical-align: -.125em;
+  fill: currentColor;
 }
 
-/* white name colored */
-.title-name-white {
-  color: white;
-  font-size: xx-large;
-}
-
-/* orange generic text colored */
-.text-orange {
-  color: #ff8200;
-}
-
-/* orange generic background color */
-.bg-orange {
-  background-color: #ff8200;
-}
-
-.title-name.new-color-title-name {
-  color: white !important;
-  font-size: xx-large;
-}
-
-
-/* custom navbar collapse */
-@media only screen and (max-width:768px){
-  .navbar-collapse{
-    position: absolute;
-    top: 100%;
-    left: 0%;
-    width: 100%;
-    text-align: center;
-    background-color: rgba(255, 130, 0, 1);
-  }  
-}
-
-
-/* image size adjust */
-.responsive {
-  height: 400px;
-}
-
-.main-title-white {
-  color: white;
-  padding-top: 130px;
-}
-
-/* Text secondary */
-.secondary-title-orange {
-  color: #ff8200;
-  padding-top: 40px;
-}
-
-/* Container holding the image and the text */
-.text-overlay-img {
+.nav-scroller {
   position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
   text-align: center;
-  color: white;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
 }
 
-/* Centered text on image */
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.nav-background {
+  background-color: #51667b;
 }
 
-
-/* custom local button orange and white */
-.custom-white-button {
-  background-color: #ff8200;
-  color: white;
+/* green generic text colored */
+.text-green {
+  color: #51667b;
 }
-
-.custom-white-button:hover {
-  background-color: white;
-  color: #ff8200;
-}
-
-/* custom local button orange and gray */
-.custom-button {
-  background-color: #ff8200;
-  color: white;
-}
-
-.custom-button:hover {
-  background-color: #b1b1b1;
-  color: white;
-}
-
 
 /* custom local link */
 .link-custom {
-  color: #ff8200;
+  color: #f63b94;
 }
 
 .link-custom:hover {
-  color: #b1b1b1;
+  color: #51667b;
 }
 
 
@@ -136,70 +91,27 @@ Supported by elysion.digital
 }
 
 .link-black-custom:hover {
-  color: #ff8200;  
+  color: #f63b94;  
 }
 
+/* custom button */
+.btn-custom {
+  background-color: #f63b94;
+  color: white;
+  border-color: white;
+}
+
+.btn-custom:hover {
+  background-color: #51667b;
+  color: white;
+}
+
+/* custom local footer */
 .footer-bg-light-gray {
   background-color: #fdfcfc;
 }
 
-/* custom local footer */
 .footer-copyright {
-  background-color: rgba(177, 177, 177, 0.8);
-}
-
-
-/* custom singin form */
-.form-signin {
-  width: 100%;
-  max-width: 330px;
-  padding: 15px;
-  margin: auto;
-}
-.form-signin .form-control {
-  position: relative;
-  box-sizing: border-box;
-  height: auto;
-  padding: 10px;
-  font-size: 16px;
-}
-.form-signin .form-control:focus {
-  z-index: 2;
-}
-.form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-.form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-
-/* remove arrows from input type number */
-input[type=number] { -moz-appearance:textfield; }
-
-
-/* star from quiz */
-.star-bgn-color{color: #b1b1b1;}
-.star-bgn-color:hover{color:#ff8200;}
-.star-bgn-color:hover ~ label{color:#ff8200;}
-
-.star-input{display:none;}
-.star-input:checked ~ label{color:#ff8200;}
-
-.bidi-direction{
-  font-size: xx-large ;
-  direction: rtl;/* right to left */
-  unicode-bidi: bidi-override;/* bidi de bidireccional */
-}
-
-.star-bgn-mute-color{color: #b1b1b1;}
-.star-bgn-mute-color:label{color:#ff8200;}
-
-.bidi-direction-mute{
-  font-size: xx-large;
-  direction: rtl;/* right to left */
-  unicode-bidi: bidi-override;/* bidi de bidireccional */
+  background-color: #51667b;
+  margin-bottom: -20px;
 }

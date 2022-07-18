@@ -7,16 +7,125 @@
 
 {% block container %}
 
-<main role="main">
+<main>
 
-  <br/><br/><br/><br/><br/><br/>
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="{% static 'img/carousel1.jpg' %}" alt="lidisen">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#51667b"/></svg>
 
-  <h1>lidisen</h1>
-  
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequatur recusandae quam repellat ipsum adipisci, exercitationem eligendi quisquam ab illum magni nulla! Cupiditate iste suscipit ipsam totam atque facilis ea.</p>
-  
-  <br/><br/>
+        <div class="container">
+          <div class="carousel-caption">
+            <h1 class="d-block d-md-none">Sistema de administraci&oacute;n.</h1>
+            <p class="d-block d-md-none">La mejor soluci&oacute;n para administrar tu residencial.</p>
+            <p><a class="btn btn-lg btn-custom" href="#">Producto</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="{% static 'img/carousel2.jpg' %}" alt="lidisen">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#51667b"/></svg>
+
+        <div class="container">
+          <div class="carousel-caption">
+            <h1 class="d-block d-md-none">Nuestra soluci&oacute;n.</h1>
+            <p class="d-block d-md-none">Conoce nuestra propuesta enfocada en las personas.</p>
+            <p><a class="btn btn-lg btn-custom" href="#">Experiencia</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
+  </div>
+
+
+  <h1 class="display-6 text-center">Plataforma de gestión administrativa</h1>
+</br>
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-lg-4">
+        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{% static 'img/test.jpg' %}" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140">
+        <h2 class="fw-normal">Prueba</h2>
+        <p>Estamos seguros de que nuestro sistema de administraci&oacute;n de residenciales puede resolver todas tus necesidades. Permitenos mostrarte c&oacute;mo puedes lograrlo.</p>
+        <p><a class="btn btn-custom" href="#">Conocenos &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{% static 'img/implementation.jpg' %}" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140">
+        <h2 class="fw-normal">Implementaci&oacute;n</h2>
+        <p>Te acompañamos paso a paso para lograr que todos quieran usar el sistema, descubriran los beneficios y lo amigable que es usar nuestra plataforma.</p>
+        <p><a class="btn btn-custom" href="#">Resuelve &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{% static 'img/cost.jpg' %}" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140">
+        <h2 class="fw-normal">Costos</h2>
+        <p>Toda la funcionalidad incluida en un &uacute;nico paquete mensual, capacitaci&oacute;n, soporte y atenci&oacute;n personalizada.</p>
+        <p><a class="btn btn-custom" href="#">Proyecta &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">La parte <span class="text-muted">t&eacute;cnica.</span></h2>
+        <p class="lead">Lidisen es una respuesta a los problemas tipicos de un residencial,
+            donde necesitan manejar toda la parte administrativa, mantener el control de los ingresos,
+            los gastos, mantenimientos, morosidad, recibos, cartas de no adeudo, 
+            reservaciones de &aacute;reas comunes y toda esa gesti&oacute;n necesaria para mantener
+            la plusvalia de su patrimonio.
+        </p>
+      </div>
+      <div class="col-md-5">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="{% static 'img/tecnical.jpg' %}" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1"><span class="text-muted">Lo mejor de </span>todo.</h2>
+        <p class="lead">
+          La parte t&eacute;cnica la resolvimos de la forma correcta,
+          pero tenemos un punto que nos hace diferentes y es la experiencia que una persona tiene
+          al usar nuestra soluci&oacute;n, el entendimiento de saber que tratamos con personas nos
+          ha llevado a desarrollar un producto que la gente quiere usar, con el cual todos se
+          sienten c&oacute;modos y que no necesita un manual para utilizarse.
+          Es sin duda una opci&oacute;n que vale la pena probar y despu&eacute;s comprobaran que fue la mejor opci&oacute;n.
+        </p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="{% static 'img/best.jpg' %}" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500">
+      </div>
+    </div>
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
 
 </main>
+
 
 {% endblock %}

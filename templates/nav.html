@@ -1,31 +1,46 @@
 {% load static %}
 
 <header>
-{% if landing %}
-<nav class="navbar navbar-expand-md navbar-light fixed-top navbar-custom-malli">
-{% else %}
-<nav class="navbar navbar-expand-md navbar-light fixed-top navbar-orange-custom-malli">
-{% endif %}
+
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark nav-background" aria-label="Offcanvas navbar large">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="{% static 'img/logo.png' %}" height="32" class="d-inline-block align-top"/></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end text-white nav-background" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbar2Label"><img src="{% static 'img/logo.png' %}" height="30" class="d-inline-block align-top"/></h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{% url 'home:home' %}">Soluciones residenciales</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarLgDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Producto
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarLgDropdown">
+                <li><a class="dropdown-item" href="#">Sistema de administraci&oacute;n</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Nuestro equipo</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-custom" href="#">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
   
-  <img src="{% static 'img/lidisen.png' %}" width="30" height="50" alt="lidisen" loading="lazy">
-  <a class="navbar-brand" href="#"><span class="{% if landing %}title-name{% else %}title-name-white{% endif %}">Less</span> to repair</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse navbar-custom" id="navbar">
-  
-    <ul class="navbar-nav ml-auto">
-
-      <!-- Public access -->
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Link test</a>
-      </li>
-      
-    </ul>
-
-  </div>
-
-</nav>
-
 </header>
